@@ -8,28 +8,34 @@ miseとかasdfでもなんでもいい。
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-2. Install Terraform
-```
-brew install terraform
-```
-
-3. Clone this repo
+2. Clone this repo
 ```
 git clone https://github.com/tohta/terraform-pagerduty-example.git
 ```
 
-4. Set
+3. Set PD API Access Key
+好きな方法でよし。
 ```
-cat .envrc.example
+cat .envrc
 export TF_VAR_pd_token=*******
 ```
 
-5. Terrafrom plan
+4. Install Terraform
+```
+brew install terraform
+```
+
+5. Terrafrom init
+```
+terraform init
+```
+
+6. Terrafrom plan
 ```
 terraform plan
 ```
 
-6. Terraform apply
+7. Terraform apply
 ```
 terraform apply
 ```
