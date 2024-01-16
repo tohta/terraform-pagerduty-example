@@ -1,6 +1,6 @@
 # technical services
 resource "pagerduty_service" "payment" {
-  name = "Payment Processing 2"
+  name = "Payment Processing"
   escalation_policy = pagerduty_escalation_policy.weekday.id
   alert_creation = "create_alerts_and_incidents"
   acknowledgement_timeout = "null"
