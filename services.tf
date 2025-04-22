@@ -33,15 +33,14 @@ resource "pagerduty_service_dependency" "webapp" {
     dependency {
         dependent_service {
             id = pagerduty_business_service.webapp.id
-            type = pagerduty_business_service.webapp.type
+            type = "business_service"
         }
         supporting_service {
             id = pagerduty_service.payment.id
-            type = pagerduty_service.payment.type
+            type = "service"
         }
     }
 }
-
 
 output "payment_apiv2_integration_key" {
   value = pagerduty_service_integration.apiv2.integration_key
